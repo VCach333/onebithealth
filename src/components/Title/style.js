@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
         color: '#ff0043',
         fontSize: 24,
         fontWeight: 'bold',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        paddingBottom: 10
     }
 });
 
