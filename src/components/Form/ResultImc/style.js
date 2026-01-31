@@ -19,6 +19,22 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#ff0043',
         fontWeight: 'bold',
+    },
+    shareButtonBox: {
+        width: '100%',
+        alignItems: 'center',
+        marginBottom: 10
+    },
+    shareButton: {
+        borderRadius: 50,
+        backgroundColor: '#1877f2',
+        padding: 5
+    },
+    shareButtonText: {
+        color: '#fff',
+        fontWeight: 500,
+        letterSpacing: 1,
+        paddingHorizontal: 15
     }
 });
 
