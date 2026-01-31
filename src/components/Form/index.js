@@ -54,11 +54,14 @@ export default function Form(props) {
     }
 
     return (
-        
+
         <Pressable style={styles.formContext} onPress={Keyboard.dismiss}>
             <View style={styles.form}>
-                <Text style={styles.formLabel}>Altura</Text>
-                <Text style={styles.errorMessage}>{errorMessage}</Text>
+
+                <View style={styles.labelAndError}>
+                    <Text style={styles.formLabel}>Altura</Text>
+                    <Text style={styles.errorMessage}>{errorMessage}</Text>
+                </View>
                 <TextInput
                     style={styles.input}
                     onChangeText={setHeight}
@@ -67,8 +70,10 @@ export default function Form(props) {
                     placeholder='ex.: 1.75'
                 />
 
-                <Text style={styles.formLabel}>Peso</Text>
-                <Text style={styles.errorMessage}>{errorMessage}</Text>
+                <View style={styles.labelAndError}>
+                    <Text style={styles.formLabel}>Peso</Text>
+                    <Text style={styles.errorMessage}>{errorMessage}</Text>
+                </View>
                 <TextInput
                     style={styles.input}
                     onChangeText={setWeight}
@@ -77,10 +82,6 @@ export default function Form(props) {
                     keyboardType='numeric'
                 />
 
-                {/* <Button 
-                    title={textButton}
-                    onPress={() => {validationImc()}}
-                /> */}
                 <TouchableOpacity
                     style={styles.buttonCalculator}
                     title={textButton}

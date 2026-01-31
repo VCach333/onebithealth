@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     formLabel: {
         color: '#000',
         fontSize: 18,
-        paddingLeft: 20
+        //paddingLeft: 20
     },
     input: {
         width: '90%',
@@ -45,8 +45,16 @@ const styles = StyleSheet.create({
     errorMessage: {
         fontSize: 12,
         color: '#ff00437a',
-        fontWeight: 500,
-        paddingLeft: 20
+        fontWeight: 500
+    },
+    labelAndError: {
+        margin: 'auto',
+        marginLeft: 20,
+        width: '85%',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between'
     }
 });
 
