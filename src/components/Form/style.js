@@ -55,6 +55,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'flex-end',
         justifyContent: 'space-between'
+    },
+    exibitionResultImc: {
+        width: '100%',
+        height: '50%'
     }
 });
 
