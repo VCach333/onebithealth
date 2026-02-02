@@ -60,7 +60,56 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '50%'
     },
-    
+    listImcs: {
+        width: '90%',
+        padding: 10,
+        marginTop: 20,
+        marginBottom: 20,
+    },
+    listContent: {
+        marginBottom: 10,
+        backgroundColor: '#d4d4d47a',
+        width: '100%',
+        borderRadius: 15,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    listContentLeft: {
+        padding: 15,
+        width: 80,
+        borderRightWidth: 1,
+        borderRightColor: '#f8f8f8',
+    },
+    listContentLeftText: {
+        fontSize: 12,
+        fontWeight: 600,
+        color: '#ff00437a',
+        textAlign: 'center'
+    },
+    listContentCenter: {
+        padding: 25,
+    },
+    listContentCenterText: {
+        fontSize: 18,
+        fontWeight: 800,
+        color: '#ff0043',
+        textAlign: 'center'
+    },
+    listContentRight: {
+        padding: 15,
+        width: 80,
+        display: 'flex',
+        borderLeftWidth: 1,
+        borderLeftColor: '#f8f8f8',
+    },
+    listContentRightText: {
+        fontSize: 12,
+        fontWeight: 600,
+        color: '#1877f2',
+        textAlign: 'center'
+    }
 });
 
 export default styles;

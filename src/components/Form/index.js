@@ -29,9 +29,24 @@ export default function Form(props) {
         let weightFormat = weight.replace(',', '.')
         let heightFormat = height.replace(',', '.')
         let totalImc = (weightFormat / (heightFormat * heightFormat)).toFixed(2);
+        let estado
+
+        if(totalImc < 20) {
+            estado = 'Baixo'
+        
+        } else if(totalImc < 23) {
+            estado = 'Média'
+        
+        } else {
+            estado = 'Alto'
+        }
+
         setImcList((arr) => [...arr, {
             id: new Date().getTime(),
-            imc: totalImc
+            imc: totalImc,
+            height: heightFormat,
+            weight: weightFormat,
+            estado: estado
         }]);
         setImc(totalImc);
     }
@@ -113,17 +128,36 @@ export default function Form(props) {
 
             <FlatList
                 style={styles.listImcs}
+                showsVerticalScrollIndicator={false}
                 data={imcList.reverse()}
-                renderItem={({item}) => {
-                    
-                    return(
-                        <Text style={styles.resultImcItem}>
-                            <Text style={styles.resultImcItemText}>Resultado:</Text>
-                            {item.imc}
-                        </Text>
+                renderItem={({ item }) => {
+
+                    return (
+                        <View style={styles.listContent}>
+
+                            <View style={styles.listContentLeft}>
+                                <View>
+                                    <Text  style={styles.listContentLeftText}>{item.weight}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.listContentLeftText}>{item.height}</Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.listContentCenter}>
+                                <Text style={styles.listContentCenterText}>{item.imc}</Text>
+                            </View>
+
+                            <View style={styles.listContentRight}>
+                                <View>
+                                    <Text style={styles.listContentRightText}>{item.estado}</Text>
+                                </View>
+                            </View>
+
+                        </View>
                     );
                 }}
-                keyExtractor={(item) => {item.id}}
+                keyExtractor={(item) => { item.id }}
             >
 
             </FlatList>
