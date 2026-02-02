@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     exibitionResultImc: {
         width: '100%',
         height: '50%'
-    }
+    },
+    
 });
 
 export default styles;
